@@ -30,9 +30,9 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       dist: {
-    	files: {
-    		'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
-    	}
+        files: {
+            'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+        }
       },
     },
     qunit: {
