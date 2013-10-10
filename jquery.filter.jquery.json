@@ -1,0 +1,27 @@
+{
+  "name": "jquery.filter",
+  "title": "jQuery Filter Plugin",
+  "description": "The jQuery Filter allows you to filter your content with ease",
+  "version": "1.0.0",
+  "homepage": "http://projects.e-freak.org/jQuery-Filter-Plugin",
+  "author": {
+    "name": "Max Joehnk",
+    "email": "maxjoehnk@gmail.com",
+    "url": "http://e-freak.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e-freak/jQuery-Filter-Plugin.git"
+  },
+  "bugs": "http://issues.e-freak.org/jQuery-Filter-Plugin",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://projects.e-freak.org/jQuery-Filter-Plugin/blob/master/LICENSE"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}
