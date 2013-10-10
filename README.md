@@ -12,9 +12,9 @@ Download the [production version][min] or the [development version][max].
 ```html
 <input type="text" data-filter-container="#example-filterable" data-filter="name" class="filter">
 <select data-filter-container="#example-filterable" data-filter="state" class="filter">
-	<option data-filter-ignore>-- Release State --</option> //Ignore this option
+	<option data-filter-ignore>-- Release State --</option> <!-- Ignore this option -->
 	<option>Beta</option>
-	<option data-filter-value="RC">Release Candidate</option> //Filter with "RC" instead of "Release Candidate"
+	<option data-filter-value="RC">Release Candidate</option> <!-- Filter with "RC" instead of "Release Candidate"-->
 </select>
 <button class=".reset-filter">Reset Filter</button>
 <ul id="#example-filterable">
@@ -30,4 +30,4 @@ JQuery Filter Plugin is freely distributable under the terms of an MIT-style lic
 Copyright notice and permission notice shall be included in all copies or substantial portions of the Software.
 
 ## Authors
-Max Jöhnk / [@e-freak](https://twitter.com/efreak1996)
+Max J&ouml;hnk / [@e-freak](https://twitter.com/efreak1996)
