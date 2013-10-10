@@ -3,7 +3,6 @@
 The jQuery Filter Plugin allows you to filter any content on your webpage. 
 
 ## Getting Started
-###Please use the [src file](https://raw.github.com/e-freak/jQuery-Filter-Plugin/master/src/jquery.filter.js) for now, the dist files aren't working as expected yet
 
 Download the [production version][min] or the [development version][max].
 

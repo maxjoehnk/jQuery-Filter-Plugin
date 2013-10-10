@@ -5,35 +5,38 @@
 * Copyright (c) 2013 Max Joehnk;
 * Licensed under the MIT License.
 */
-(function($) {
+$(function() {
 	$('body').on('change', '.filter', function() {
-		var filter = $(this);
-		$(filter.attr('data-filter-container')).children('.filterable').each(function(index, element) {
-			var filterVal = $(element).attr('data-' + filter.attr('data-filter')).toLowerCase();
-			if (filter.is('input')) {
-				if (filterVal.indexOf(filter.val().toLowerCase()) === -1 && filter.val() !== '') {
-					$(element).fadeOut();
-				}else {
-					$(element).fadeIn();
-				}
-			}else if (filter.is('select')) {
-				if (filter.children(':selected').is('option[data-filter-ignore]')) {
-					$(element).fadeIn();
-					return;
-				}
-				if (filter.children(':selected').is('option[data-filter-value]')) {
-					if (filterVal !== filter.children(':selected').attr('data-filter-value').toLowerCase()) {
-						$(element).fadeOut();
-					}else {
-						$(element).fadeIn();
+		var originalFilter = $(this);
+		$(originalFilter.attr('data-filter-container')).children('.filterable').each(function(index, filterable) {
+			var filters = $('body').find(".filter[data-filter-container='" + originalFilter.attr('data-filter-container') + "']");
+			var hide = false;
+			$.each(filters, function(i, element) {
+				var filter = $(element);
+				var filterVal = $(filterable).attr('data-' + $(filter).attr('data-filter')).toLowerCase();
+				if (filter.is('input')) {
+					if (filterVal.indexOf(filter.val().toLowerCase()) === -1 && filter.val() !== '') {
+						hide = true;
 					}
-				}else {
-					if (filterVal !== filter.children(':selected').html().toLowerCase()) {
-						$(element).fadeOut();
+				}else if (filter.is('select')) {
+					if (filter.children(':selected').is('option[data-filter-ignore]')) {
+						return;
+					}
+					if (filter.children(':selected').is('option[data-filter-value]')) {
+						if (filterVal !== filter.children(':selected').attr('data-filter-value').toLowerCase()) {
+							hide = true;
+						}
 					}else {
-						$(element).fadeIn();
+						if (filterVal !== filter.children(':selected').html().toLowerCase()) {
+							hide = true;
+						}
 					}
 				}
+			});
+			if (hide) {
+				$(filterable).fadeOut();
+			}else {
+				$(filterable).fadeIn();
 			}
 		});
 	});
@@ -48,4 +51,4 @@
 		});
 		$('.filterable').fadeIn();
 	});
-}(jQuery));
+});
