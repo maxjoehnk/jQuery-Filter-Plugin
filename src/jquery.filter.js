@@ -26,8 +26,11 @@ $(function() {
 					}
 				}
 			});
-			if (hide) $(filterable).fadeOut();
-			else $(filterable).fadeIn();
+			if (hide) {
+				$(filterable).fadeOut();
+			}else {
+				$(filterable).fadeIn();
+			}
 		});
 	});
 	
