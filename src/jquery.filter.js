@@ -8,8 +8,14 @@ $(function() {
 				var filter = $(element);
 				var filterVal = $(filterable).attr('data-' + $(filter).attr('data-filter')).toLowerCase();
 				if (filter.is('input')) {
-					if (filterVal.indexOf(filter.val().toLowerCase()) === -1 && filter.val() !== '') {
-						hide = true;
+					if (filter.is('input[type=checkbox]')) {
+						if (filterVal !== filter.is(':checked').toString()) {
+							hide = true;
+						}
+					}else {
+						if (filterVal.indexOf(filter.val().toLowerCase()) === -1 && filter.val() !== '') {
+							hide = true;
+						}
 					}
 				}else if (filter.is('select')) {
 					if (filter.children(':selected').is('option[data-filter-ignore]')) {
