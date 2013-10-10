@@ -14,7 +14,7 @@
 					$(element).fadeIn();
 					return;
 				}
-				if (filter.children(':selected').is('option[data-filter-value]'])) {
+				if (filter.children(':selected').is('option[data-filter-value]')) {
 					if (filterVal !== filter.children(':selected').attr('data-filter-value').toLowerCase()) {
 						$(element).fadeOut();
 					}else {
