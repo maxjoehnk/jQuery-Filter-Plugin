@@ -1,5 +1,7 @@
 # jQuery Filter Plugin
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/maxjoehnk/jQuery-Filter-Plugin.svg)](https://greenkeeper.io/)
+
 The jQuery Filter Plugin allows you to filter any content on your webpage. 
 
 ## Getting Started
